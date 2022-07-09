@@ -6,6 +6,7 @@ description = """A simple, functional, PRNG.
 Generates random i32 (with or without range) and bool."""
 authors = ["mateusqqfoi"]
 rust-version = "1.62.0"
+license = "MIT"
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
