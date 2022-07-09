@@ -1,0 +1,13 @@
+[package]
+name = "sol_prng"
+version = "1.0.0"
+edition = "2021"
+description = """A simple, functional, PRNG. 
+Generates random i32 (with or without range) and bool."""
+authors = ["mateusqqfoi"]
+rust-version = "1.62.0"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
