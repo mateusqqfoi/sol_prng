@@ -2,13 +2,12 @@
 name = "sol_prng"
 version = "1.0.0"
 edition = "2021"
-description = """A simple, functional, PRNG. 
-Generates random i32 (with or without range) and bool."""
+description = """
+A simple functional pseudo random number generator.
+No mutability. Relies on shadowing as of now.
+"""
 authors = ["mateusqqfoi"]
 rust-version = "1.62.0"
 license = "MIT"
-
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
