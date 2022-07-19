@@ -8,8 +8,6 @@ A simple *functional pseudo random number generator*.
 use sol_prng::Rand;
 
 // make a starting Rand
-// to make it not deterministic (predictable), use something
-// like the current system time as the first ever seed.
 let starting_rand = Rand::new(42);
 
 // generate your next Rand and a value, in this case an i32

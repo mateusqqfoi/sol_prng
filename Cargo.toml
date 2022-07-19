@@ -1,6 +1,6 @@
 [package]
 name = "sol_prng"
-version = "1.1.1"
+version = "1.1.0"
 edition = "2021"
 description = """
 A simple functional pseudo random number generator.
