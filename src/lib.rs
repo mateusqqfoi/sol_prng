@@ -1,21 +1,27 @@
-#![allow(dead_code)]
-/// ## Usage:
-///```rust
-/// 
-/// // make a starting Rand
-/// let starting_rand = Rand::new(42);
-///
-/// // generate your next Rand and a value, in this case an i32
-/// let (r, n) = r.next_i32_ranged(1, 10);
-/// println!("Random number on range 1-10: {}", n);
-///
-/// // to keep using, shadow the last Rand with a new one,
-/// // returned from next_* functions.
-/// let (r, n) = r.next_i32_ranged(1, 10);
-/// println!("Random number on range 1-10: {}", n);
-/// let (r, n) = r.next_i32_ranged(1, 10);
-/// println!("Random number on range 1-10: {}", n);
-///```
+//! # SOL_PRNG
+//! A simple *functional pseudo random number generator*.
+//! **No mutability**. Relies on shadowing as of now.
+//! ## Usage:
+//!```rust
+//!
+//! // make a starting Rand
+//! // to make it not deterministic (predictable), use something 
+//! like the current system time as the first seed.
+//! let starting_rand = Rand::new(42);
+//!
+//! // generate your next Rand and a value, in this case an i32
+//! let (r, n) = r.next_i32_ranged(1, 10);
+//! println!("Random number on range 1-10: {}", n);
+//!
+//! // to keep using, shadow the last Rand with a new one,
+//! // returned from next_* functions.
+//! let (r, n) = r.next_i32_ranged(1, 10);
+//! println!("Random number on range 1-10: {}", n);
+//! let (r, n) = r.next_i32_ranged(1, 10);
+//! println!("Random number on range 1-10: {}", n);
+//!```
+
+/// Holds a seed and a value generated with that seed.
 pub struct Rand {
     seed: i32,
     value: i32,
@@ -32,6 +38,7 @@ impl Rand {
         }
     }
 
+    /// Secret formula ;^).
     fn gen(seed: i32) -> i32 {
         let mut n: i32 = seed;
 
@@ -60,7 +67,7 @@ impl Rand {
         (r, n < 0)
     }
 
-    /// Generates a new Rand pre-seeded and a pseudo random i32 
+    /// Generates a new Rand pre-seeded and a pseudo random i32
     /// in provided range.
     pub fn next_i32_ranged(&self, from: i32, to: i32) -> (Rand, i32) {
         let (r, n) = self.next_i32();
