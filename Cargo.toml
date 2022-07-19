@@ -1,12 +1,12 @@
 [package]
 name = "sol_prng"
-version = "1.1.0"
+version = "1.2.0"
 edition = "2021"
 description = """
 A simple functional pseudo random number generator.
 No mutability. Relies on shadowing as of now.
 """
-authors = ["mateusqqfoi"]
+authors = ["mateusqqfoi <mateusoliveiraspqr@gmail.com>"]
 rust-version = "1.62.0"
 license = "MIT"
 
